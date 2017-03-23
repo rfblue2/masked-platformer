@@ -1,0 +1,1 @@
+largepush_01.png.png 34 23, largepush_02.png.png 184 20, largepush_03.png.png 337 15, largepush_04.png.png 494 20, largepush_05.png.png 637 23, largepush_06.png.png 34 23, largepush_07.png.png 184 20, largepush_08.png.png 337 15.

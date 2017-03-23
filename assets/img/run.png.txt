@@ -1,0 +1,1 @@
+run_01.png.png 40 19, run_02.png.png 186 22, run_03.png.png 306 23, run_04.png.png 471 22, run_05.png.png 627 20, run_06.png.png 40 19, run_07.png.png 186 22, run_08.png.png 306 23.
