@@ -102,11 +102,11 @@ function M.new(options)
     if dir == "left" then--and math.abs(vx) < instance.speed then
       instance.dir = "left"
       instance:setLinearVelocity(-instance.speed, vy)
-      instance:applyForce(-10000, 0, instance.x, instance.y)
+      instance:applyForce(-200, 0, instance.x, instance.y)
     elseif dir == "right" then--and math.abs(vx) < instance.speed then
       instance.dir = "right"
       instance:setLinearVelocity(instance.speed, vy)
-      instance:applyForce(10000, 0, instance.x, instance.y)
+      instance:applyForce(200, 0, instance.x, instance.y)
     end
     if instance.state ~= "in_air" and instance.state ~= "jump_up" then
       instance.state = "run"
@@ -117,7 +117,7 @@ function M.new(options)
   function instance:jump()
     print("jumping")
     instance.state = "jump_up"
-    instance:applyLinearImpulse(0, -500, instance.x, instance.y)
+    instance:applyLinearImpulse(0, -200, instance.x, instance.y)
   end
 
   local function spriteListener( event )

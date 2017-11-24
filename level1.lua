@@ -78,6 +78,8 @@ function scene:create( event )
 	-- running until the scene is on the screen.
 	physics.start()
 	physics.pause()
+	physics.setDrawMode("hybrid") -- Allows viewing outlines for collision
+	physics.setGravity(0, 20)
 
 --------------------------------------------------------------------------------
 	-- create a grey rectangle as the backdrop
@@ -111,10 +113,10 @@ function scene:create( event )
 	-- make crates to block player from falling
 	local crate1 = display.newImageRect( "assets/img/crate.png", 90, 90 )
 	crate1.x, crate1.y = display.screenOriginX - 45, grass.y - grass.height/2 - 90
-	physics.addBody( crate1, "static", { friction=0.5 })
+	physics.addBody( crate1, "static", { friction=0.7 })
 	local crate2 = display.newImageRect( "assets/img/crate.png", 90, 90 )
 	crate2.x, crate2.y = display.screenOriginX + screenW + 45, grass.y - grass.height/2 - 90
-	physics.addBody( crate2, "static", { friction=0.5 })
+	physics.addBody( crate2, "static", { friction=0.7 })
 --------------------------------------------------------------------------------
 	player = playerFactory.new({
 		speed = 300
@@ -124,7 +126,7 @@ function scene:create( event )
 	-- also adds a foot sensor
 	local playerW, playerH = player.width, player.height
 	physics.addBody( player, "dynamic", {
-		density = 5.0,
+		density = 2.0,
 		friction = 0.5,
 		bounce = 0.1,
 		shape = {
